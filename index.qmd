@@ -29,7 +29,7 @@ Today, open is both a challenge to and an enabler of concentrations of power. Ov
 | __1__ | Data at the most granular subject level, which is persisted and used to provide a longitudinal record. | Decentralized catalogs, semantic interoperability |
 | __2__ | Aggregated data, for example statistics for policy evaluation and benchmarking | __Federated learning__ |
 | __3__ | Data analytics modules, that provide access to work and access the data. | __Federated learning (FL)__ [@rieke2020future] and __privacy- enhancing technologies (PETs)__ [@scheibner2021revolutionizing;@jordan2022selecting]: new paradigms that address the problem of data governance and privacy by training algorithms collaboratively without exchanging the data itself. Models can be trained on combined datasets and made available as open source artifacts for decision support. Data analysts can use FL and PETs to work with the data in a collaborative, decentralized fashion. |
-| __4__ | Trained models that have been derived from the data and can be used stand-alone for decision support. | __ONNX__ [@onnx]: an open format built to represent machine learning models. |
+| __4__ | Trained models that have been derived from the data and can be used stand-alone for decision support. | ONNX, HugginFace ... |
 
 : Types of data sharing and in relation to new standards and technology enablers to create openness. Taken from de Reuver et al. (2022). {#tbl-types-data-sharing}
 

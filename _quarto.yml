@@ -25,5 +25,5 @@ format:
     grid:
       margin-width: 350px
     theme: cosmo
-  pdf:
-    documentclass: scrreprt
+  # pdf:
+    # documentclass: scrreprt
