@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Norah Jones">
+<meta name="author" content="Daniel Kapitan">
 <meta name="dcterms.date" content="2024-05-11">
 
-<title>Federated-data-science</title>
+<title>Federated Data Science in Practice</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -73,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating slimcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -97,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Federated-data-science</a> 
+      <a href="./">Federated Data Science in Practice</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -133,24 +153,29 @@ ul.task-list li input[type="checkbox"] {
 </li>
     </ul>
     </div>
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
+  <ul class="collapse">
+  <li><a href="#the-engines-of-data-science-and-the-paradox-of-open" id="toc-the-engines-of-data-science-and-the-paradox-of-open" class="nav-link" data-scroll-target="#the-engines-of-data-science-and-the-paradox-of-open">The engines of data science and the paradox of open</a></li>
+  <li><a href="#from-closed-digtal-platforms-towards-open-federated-data-platforms" id="toc-from-closed-digtal-platforms-towards-open-federated-data-platforms" class="nav-link" data-scroll-target="#from-closed-digtal-platforms-towards-open-federated-data-platforms">From closed digtal platforms towards open, federated data platforms</a></li>
+  <li><a href="#image-credit" id="toc-image-credit" class="nav-link" data-scroll-target="#image-credit">Image credit</a></li>
+  </ul></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  </ul>
-</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Federated-data-science</h1>
+<h1 class="title">Federated Data Science in Practice</h1>
 </div>
 
 
@@ -160,7 +185,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Norah Jones </p>
+             <p>Daniel Kapitan </p>
           </div>
   </div>
     
@@ -179,13 +204,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Quarto book.</p>
-<p>To learn more about Quarto books visit <a href="https://quarto.org/docs/books" class="uri">https://quarto.org/docs/books</a>.</p>
+
+<section id="preface" class="level1 unnumbered page-columns page-full">
+<h1 class="unnumbered">Preface</h1><p><img src="terra-ultima-fortuna-fragilis.jpg" title="Federated Data Science in Practice" class="quarto-cover-image img-fluid"></p>
+<section id="the-engines-of-data-science-and-the-paradox-of-open" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-engines-of-data-science-and-the-paradox-of-open">The engines of data science and the paradox of open</h2>
+<p>The <a href="https://computerhistory.org/timelines/">Computer History Museum</a> recounts that the history of the <a href="https://en.wikipedia.org/wiki/Information_Age">Information Age</a> is driven by three ‘engines’, namely the silicon engine, the storage engine and the internet as the networking engine. Each of these engines have been instrumental in the development in of data science as we know today. Without the silicon engine, we would not be able to train foundational large language models with over 10<sup>23</sup> FLOPs.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Without the storage engine and the internet, we would not be able to store and collect petabyte-sized datasets such as <a href="https://commoncrawl.org/">Common Crawl</a> as input for these models.</p>
+<div class="no-row-height column-margin column-container"><div id="fn1"><p><sup>1</sup>&nbsp;Floating point operations, see <a href="https://ourworldindata.org/grapher/artificial-intelligence-training-computation">this graph on Our World in Data</a>.</p></div><div id="fn2"><p><sup>2</sup>&nbsp;Paul Keller and Alek Tarkowski, <a href="https://paradox.openfuture.eu/">The Paraodox of Open</a>.</p></div></div><p>Besides the technological developments in and of themselves, the internet also gave birth to the open movement.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Numerous organisations and initiatives have been launched with a belief in openness and free knowledge. Their proponents placed their bets on the combined power of networked information services and new governance models for the production and sharing of content and data. Members of this broad movement believed it possible to leverage this combination of power and opportunity to build a more democratic society, unleashing the power of the internet to create universal access to knowledge and culture. Such openness meant not only freedom, but also presented a path to justice and equality.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+We learned that open approaches flourish under two types of conditions:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Projects where many people contribute to the creation of a common resource</strong> – this is the story of Wikipedia, OpenStreetMap, Blender.org, and the countless free software projects that provide much of the internet’s infrastructure.</p></li>
+<li><p><strong>Circumstances where opening up is the result of external incentives or requirements, rather than voluntary actions</strong> – this is the story of publicly-funded knowledge production like Open Access academic publications, cultural heritage collections in the Public Domain, Open Educational Resources (OER), and Open Government data.</p></li>
+</ol>
+</div>
+</div>
+<p>However, the open revolution not happen. At least not on the scale that we and many other proponents of free culture expected. Although the copyright wars are almost over, conflicts about access to and control over informational resources have been superseded by conflicts about privacy, economic value extraction, the emergence of artificial intelligence, and the destabilising effects of dominant platforms on (democratic) societies. Instead of access to information, the control of personal data has emerged in the age of platforms as the critical contention.</p>
+<p>Today, open is both a challenge to and an enabler of concentrations of power. Over the last decade, we have witnessed a wholesale transformation of the networked information ecosystem. The web moved away from the ideals and the open design of the early internet and turned into an environment that is dominated by a small number of platforms.</p>
+</section>
+<section id="from-closed-digtal-platforms-towards-open-federated-data-platforms" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="from-closed-digtal-platforms-towards-open-federated-data-platforms">From closed digtal platforms towards open, federated data platforms</h2>
+<p><span class="citation" data-cites="dereuver2018digital">(<a href="references.html#ref-dereuver2018digital" role="doc-biblioref">de Reuver, Sørensen, and Basole 2018</a>)</span>, <span class="citation" data-cites="dereuver2022openness">(<a href="references.html#ref-dereuver2022openness" role="doc-biblioref">de Reuver et al. 2022</a>)</span></p>
+<div class="no-row-height column-margin column-container"><div id="ref-dereuver2018digital" class="csl-entry" role="listitem">
+de Reuver, Mark, Carsten Sørensen, and Rahul C. Basole. 2018. <span>“The <span>Digital Platform</span>: <span>A Research Agenda</span>.”</span> <em>Journal of Information Technology</em> 33 (2): 124–35. <a href="https://doi.org/10.1057/s41265-016-0033-3">https://doi.org/10.1057/s41265-016-0033-3</a>.
+</div><div id="ref-dereuver2022openness" class="csl-entry" role="listitem">
+de Reuver, Mark, Hosea Ofe, Wirawan Agahari, Antragama Ewa Abbas, and Anneke Zuiderwijk. 2022. <span>“The Openness of Data Platforms: A Research Agenda.”</span> In <em>Proceedings of the 1st <span>International Workshop</span> on <span>Data Economy</span></em>, 34–41. <span>DE</span> ’22. New York, NY, USA: Association for Computing Machinery. <a href="https://doi.org/10.1145/3565011.3569056">https://doi.org/10.1145/3565011.3569056</a>.
+</div></div><div id="tbl-types-data-sharing" class="quarto-float anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-types-data-sharing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Types of data sharing and in relation to new standards and technology enablers to create openness. Taken from de Reuver et al.&nbsp;(2022).
+</figcaption>
+<div aria-describedby="tbl-types-data-sharing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<table class="table">
+<colgroup>
+<col style="width: 12%">
+<col style="width: 32%">
+<col style="width: 56%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"></th>
+<th style="text-align: left;"><strong>Type of data sharing</strong></th>
+<th style="text-align: left;"><strong>Technology enablers to create openness of health data platforms</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><strong>1</strong></td>
+<td style="text-align: left;">Data at the most granular subject level, which is persisted and used to provide a longitudinal record.</td>
+<td style="text-align: left;">Decentralized catalogs, semantic interoperability</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>2</strong></td>
+<td style="text-align: left;">Aggregated data, for example statistics for policy evaluation and benchmarking</td>
+<td style="text-align: left;"><strong>Federated learning</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><strong>3</strong></td>
+<td style="text-align: left;">Data analytics modules, that provide access to work and access the data.</td>
+<td style="text-align: left;"><strong>Federated learning (FL)</strong> <span class="citation" data-cites="rieke2020future">(<a href="references.html#ref-rieke2020future" role="doc-biblioref">Rieke et al. 2020</a>)</span> and <strong>privacy- enhancing technologies (PETs)</strong> <span class="citation" data-cites="scheibner2021revolutionizing jordan2022selecting">(<a href="references.html#ref-scheibner2021revolutionizing" role="doc-biblioref">Scheibner et al. 2021</a>; <a href="references.html#ref-jordan2022selecting" role="doc-biblioref">Jordan, Fontaine, and Hendricks-Sturrup 2022</a>)</span>: new paradigms that address the problem of data governance and privacy by training algorithms collaboratively without exchanging the data itself. Models can be trained on combined datasets and made available as open source artifacts for decision support. Data analysts can use FL and PETs to work with the data in a collaborative, decentralized fashion.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><strong>4</strong></td>
+<td style="text-align: left;">Trained models that have been derived from the data and can be used stand-alone for decision support.</td>
+<td style="text-align: left;">ONNX, HugginFace …</td>
+</tr>
+</tbody>
+</table>
+<div class="no-row-height column-margin column-container"><div id="ref-rieke2020future" class="csl-entry" role="listitem">
+Rieke, Nicola, Jonny Hancox, Wenqi Li, Fausto Milletarì, Holger R. Roth, Shadi Albarqouni, Spyridon Bakas, et al. 2020. <span>“The Future of Digital Health with Federated Learning.”</span> <em>Npj Digital Medicine</em> 3 (1): 1–7. <a href="https://doi.org/10.1038/s41746-020-00323-1">https://doi.org/10.1038/s41746-020-00323-1</a>.
+</div><div id="ref-scheibner2021revolutionizing" class="csl-entry" role="listitem">
+Scheibner, James, Jean Louis Raisaro, Juan Ramón Troncoso-Pastoriza, Marcello Ienca, Jacques Fellay, Effy Vayena, and Jean-Pierre Hubaux. 2021. <span>“Revolutionizing <span>Medical Data Sharing Using Advanced Privacy-Enhancing Technologies</span>: <span>Technical</span>, <span>Legal</span>, and <span>Ethical Synthesis</span>.”</span> <em>Journal of Medical Internet Research</em> 23 (2): e25120. <a href="https://doi.org/10.2196/25120">https://doi.org/10.2196/25120</a>.
+</div><div id="ref-jordan2022selecting" class="csl-entry" role="listitem">
+Jordan, Sara, Clara Fontaine, and Rachele Hendricks-Sturrup. 2022. <span>“Selecting <span>Privacy-Enhancing Technologies</span> for <span>Managing Health Data Use</span>.”</span> <em>Frontiers in Public Health</em> 10 (March): 814163. <a href="https://doi.org/10.3389/fpubh.2022.814163">https://doi.org/10.3389/fpubh.2022.814163</a>.
+</div></div></div>
+</figure>
+</div>
+</section>
+<section id="image-credit" class="level2">
+<h2 class="anchored" data-anchor-id="image-credit">Image credit</h2>
+<p>In the spirit of the <a href="https://www-oreilly-com.dianus.libr.tue.nl/animals.csp">animal menagerie</a> of O’Reilly books, I have chosen the <em>Fortuna Fragilis</em> as the preliminary cover. This species can be found on <a href="https://terra-ultima.tumblr.com/">Terra Ultima</a> by <a href="https://raouldeleo.com/">Raoul Deleo</a>. I like to think that federated data science is fragile and fortuitous at the same time, and that it is worth kindling if we are to put data to use for the common good.</p>
+
 
 
 </section>
+</section>
+
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
