@@ -16,7 +16,10 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-      - run: quarto install tinytex
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tinytex: true
       - run: curl -fsSL https://d2lang.com/install.sh | sh -s --
       - run: quarto add --no-prompt data-intuitive/quarto-d2
 
