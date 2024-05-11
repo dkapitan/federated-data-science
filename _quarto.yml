@@ -2,22 +2,28 @@ project:
   type: book
 
 book:
-  title: "Federated-data-science"
-  author: "Norah Jones"
+  title: "Federated Data Science in Practice"
+  author: "Daniel Kapitan"
   date: "5/11/2024"
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
     - references.qmd
+  cover-image: terra-ultima-fortuna-fragilis.jpg
 
-bibliography: references.bib
+bibliography: federated-data-science.bib
 
+## Tufte layout
+reference-location: margin
+citation-location: margin
+toc-depth: 2
+toc-location: left
+toc-title: On this page
 format:
   html:
+    grid:
+      margin-width: 350px
     theme: cosmo
   pdf:
     documentclass: scrreprt
-
-
-
